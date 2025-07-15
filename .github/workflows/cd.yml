@@ -34,4 +34,7 @@ jobs:
               run: gcloud info
 
             - name: push to registry
-              run: gcloud builds submit --tag us-central1-docker.pkg.dev/karol-playground/notely-ar-repo/notely:v1 .
+              run: gcloud builds submit --tag us-central1-docker.pkg.dev/karol-playground/notely-ar-repo/notely:latest .
+            
+            - name: deploy to cloud run
+              run: gcloud run deploy notely --image us-central1-docker.pkg.dev/karol-playground/notely-ar-repo/notely:latest --region us-central1 --allow-unauthenticated --project karol-playground --max-instances 4

@@ -6,7 +6,7 @@ import pluginSecurity from "eslint-plugin-security";
 
 export default defineConfig([
   {
-    ignores: ["dist/**"], // MUST be on its own top-level object
+    ignores: ["dist/**"],
   },
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],

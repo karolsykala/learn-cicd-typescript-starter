@@ -31,6 +31,9 @@ app.use(
 
 app.use("/", express.static(path.join(__dirname, config.api.filepathRoot)));
 
+function unused() {
+  
+}
 const v1Router = express.Router();
 
 if (db) {
